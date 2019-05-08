@@ -12,7 +12,7 @@ ENV NODE_PATH=/node_modules
 ENV PATH=$PATH:/node_modules/.bin
 #since Run yarn giving error code on jenkins commented
 #RUN yarn
-RUN npm
+RUN npm install
 
 WORKDIR /app
 ADD . /app
