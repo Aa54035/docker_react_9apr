@@ -1,7 +1,7 @@
 #First of all we're basing this on the official Node v8 repository on Docker Hub. That gives you a Node and Yarn by default.
 FROM node:8
 
-ADD yarn.lock /yarn.lock
+#ADD yarn.lock /yarn.lock
 ADD package.json /package.json
 
 #Note how the NODE_PATH environment variable puts the node_modules in the root of the container. 
