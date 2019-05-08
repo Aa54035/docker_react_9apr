@@ -12,6 +12,8 @@ ENV NODE_PATH=/node_modules
 ENV PATH=$PATH:/node_modules/.bin
 #since Run yarn giving error code on jenkins commented
 #RUN yarn
+RUN npm set progress=false
+RUN npm onfig set registry http://registry.npmjs.org/
 RUN npm install
 
 WORKDIR /app
