@@ -10,6 +10,9 @@ node {
       sh 'printenv'
     }
     stage('Build Docker test'){
+    
+     sh label: '', script: 'npm set progress=false'
+     sh label: '', script: 'npm config set registry http://registry.npmjs.org/'
      sh 'docker build -t react-test -f Dockerfile --no-cache .'
     }
     stage('Docker test'){
