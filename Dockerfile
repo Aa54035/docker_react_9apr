@@ -1,6 +1,7 @@
 #First of all we're basing this on the official Node v8 repository on Docker Hub. That gives you a Node and Yarn by default.
 FROM node:8
 
+#yarn file not present so un commented 
 #ADD yarn.lock /yarn.lock
 ADD package.json /package.json
 
