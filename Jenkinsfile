@@ -10,11 +10,12 @@ node {
       sh 'printenv'
     }
     stage('Build Docker test'){
-       sh 'docker build -t react-test -f Dockerfile --no-cache .'
+       sh 'docker build -t react-test1 -f Dockerfile --no-cache .'
     }
     stage('Docker test'){
-      sh 'docker run -d react-test'
+      sh 'docker run -d react-test1'
     }
+    /*
     stage('Clean Docker test'){
       sh 'docker rmi react-test'
     }
@@ -24,7 +25,7 @@ node {
         sh 'docker image -a'
         sh 'docker container run -it -p 3000:3000 docker-react-app'
         }
-    }
+    }*/
   }
   catch (err) {
     throw err
