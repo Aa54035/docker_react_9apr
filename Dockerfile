@@ -21,9 +21,9 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh
 ENV source ~/.nvm/nvm.sh`
 ENV source ~/.bashrc
 
-RUN echo -e '#!/bin/bash\nsource ~/.nvm/nvm.sh` \nsource ~/.bashrc' > /usr/bin/hi.sh &&  chmod +x /usr/bin/hi.sh
+RUN echo -e '#!/bin/bash\nsource ~/.nvm/nvm.sh` \nsource ~/.bashrc' > /usr/bin/hi &&  chmod +x /usr/bin/hi
 
-RUN ./hi.sh
+RUN /usr/bin/hi
 RUN nvm install 7
 
 #nvm install 0.8
