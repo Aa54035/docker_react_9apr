@@ -18,7 +18,8 @@ node {
     }
       stage('Docker run'){
       sh 'docker ps -a'
-      sh 'docker run -it -p 3000:3000 react-test4'
+      sh 'export DOCKER_HOST=tcp://http://13.125.53.177:2375'
+      sh 'docker run -t -p 3000:3000 react-test4'
     }
     /*
     stage('Clean Docker test'){
