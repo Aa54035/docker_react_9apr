@@ -10,10 +10,10 @@ node {
       sh 'printenv'
     }
     stage('Build Docker test'){
-       sh 'docker build -t react-test1 -f Dockerfile --no-cache .'
+       sh 'docker build -t react-test2 -f Dockerfile --no-cache .'
     }
     stage('Docker test'){
-      sh 'docker run -d react-test1'
+      sh 'docker run -it -p 80:80 -d react-test2'
     }
     /*
     stage('Clean Docker test'){
