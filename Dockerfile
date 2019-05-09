@@ -12,10 +12,13 @@ ENV NODE_PATH=/node_modules
 ENV PATH=$PATH:/node_modules/.bin
 #since Run yarn giving error code on jenkins commented
 #RUN yarn
-RUN npm set progress=false
-RUN npm config set registry http://registry.npmjs.org/
+#RUN npm set progress=false
+#RUN npm config set registry http://registry.npmjs.org/
 
-RUN npm install
+#RUN npm install
+RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+RUN source ~/.bashrc
+RUN nvm install 7
 
 WORKDIR /app
 ADD . /app
