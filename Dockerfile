@@ -34,6 +34,6 @@ EXPOSE 3000
 EXPOSE 35729
 #Note how the ENTRYPOINT points to run.sh. That's a file we need to create too, alongside the Dockerfile file.
 #ENTRYPOINT ["/bin/bash", "/app/run.sh"]
-
+#run removed but taking too long 
 ENTRYPOINT ["/bin/bash"]
 CMD ["start"]
