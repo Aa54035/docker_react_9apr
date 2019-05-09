@@ -23,7 +23,7 @@ RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh
 COPY myscript.sh /usr/bin/myscript.sh
 RUN chmod +x /usr/bin/myscript.sh
 RUN /usr/bin/myscript.sh
-RUN nvm install 7
+#RUN 
 
 #nvm install 0.8
 
