@@ -10,7 +10,7 @@ node {
       sh 'printenv'
     }
     stage('Build Docker test'){
-       sh 'docker build -t react-test3 -f Dockerfile --no-cache .'
+       sh 'docker build -t react-test4 -f Dockerfile --no-cache .'
     }
     stage('Docker test'){
       //sh 'docker run -it -p 80:80 -d react-test3'
@@ -18,8 +18,7 @@ node {
     }
       stage('Docker run'){
       sh 'docker ps -a'
-      sh 'docker run -it -p 3000:3000 react-test3'
-
+      sh 'docker run -it -p 3000:3000 react-test4'
     }
     /*
     stage('Clean Docker test'){
