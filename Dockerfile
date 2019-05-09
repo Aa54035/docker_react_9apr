@@ -24,7 +24,7 @@ COPY myscript.sh /usr/bin/myscript.sh
 RUN chmod +x /usr/bin/myscript.sh
 RUN /usr/bin/myscript.sh
 #RUN 
-
+#
 #nvm install 0.8
 
 WORKDIR /app
