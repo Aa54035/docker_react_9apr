@@ -33,6 +33,7 @@ ADD . /app
 EXPOSE 3000
 EXPOSE 35729
 #Note how the ENTRYPOINT points to run.sh. That's a file we need to create too, alongside the Dockerfile file.
+#ENTRYPOINT ["/bin/bash", "/app/run.sh"]
 
-ENTRYPOINT ["/bin/bash", "/app/run.sh"]
+ENTRYPOINT ["/bin/bash"]
 CMD ["start"]
