@@ -18,8 +18,11 @@ ENV PATH=$PATH:/node_modules/.bin
 #RUN npm install
 #Commented to install NPM faster 
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+ENV source ~/.nvm/nvm.sh`
 ENV source ~/.bashrc
 RUN nvm install 7
+
+#nvm install 0.8
 
 WORKDIR /app
 ADD . /app
