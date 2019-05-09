@@ -23,7 +23,7 @@ ENV source ~/.bashrc
 
 RUN echo -e '#!/bin/bash\nsource ~/.nvm/nvm.sh` \nsource ~/.bashrc' > /usr/bin/hi.sh &&  chmod +x /usr/bin/hi.sh
 
-RUN ./hi
+RUN ./hi.sh
 RUN nvm install 7
 
 #nvm install 0.8
