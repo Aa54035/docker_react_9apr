@@ -17,8 +17,9 @@ node {
       sh 'docker images'
     }
       stage('Docker run'){
-      sh 'docker container run -it -p 3000:3000 react-test3'
       sh 'docker ps -a'
+      sh 'docker run -it -p 3000:3000 react-test3'
+
     }
     /*
     stage('Clean Docker test'){
