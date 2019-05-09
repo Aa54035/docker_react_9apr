@@ -13,7 +13,7 @@ node {
        sh 'docker build -t react-test3 -f Dockerfile --no-cache .'
     }
     stage('Docker test'){
-      sh 'docker run -it -p 80:80 -d react-test3'
+      //sh 'docker run -it -p 80:80 -d react-test3'
       sh 'docker images'
     }
       stage('Docker run'){
